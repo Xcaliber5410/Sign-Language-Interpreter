@@ -24,20 +24,21 @@ def chageRes(width,height):
 image_resized=rescaleFrame(img,scale=1)
 cv.imshow('Resized_Owl',image_resized)
 
-# capture=cv.VideoCapture('Path.mp4') 
+capture=cv.VideoCapture('Path.mp4') 
 
-# while True:
-#     isTrue,frame = capture.read() 
+while True:
+    isTrue,frame = capture.read() 
 
-#     resized_frame= rescaleFrame(frame)
+    resized_frame= rescaleFrame(frame)
 
-#     cv.imshow('Video',frame)  
-#     cv.imshow('Video_Resized',resized_frame)  
+    cv.imshow('Video',frame)  
+    cv.imshow('Video_Resized',resized_frame)  
 
-#     if cv.waitKey(20) & 0xFF==ord('d') :  
-#         break
+    if cv.waitKey(20) & 0xFF==ord('d') :  
+        break
 
-# capture.release()
-# cv.destroyAllWindows()
+capture.release()
+cv.destroyAllWindows()
+
 
 cv.waitKey(0) 
